@@ -5,15 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
+    <link rel="stylesheet" href="normalize">
+    <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
+    <!--Header contains my name, which can be clicked to return home, and a menu-->
     <header>
-        <ul>
-            <li><a href="link">link</a></li>
-            <li><a href="home">home</a></li>
-            <li><a href="link">link</a></li>
-        </ul>
+        <div class="header__fullbox">
+            <div class="header__contentbox">
+                <img class="header__name">
+                    <button class="header__hamburger">Menu</button>
+            </div>
+        </div>
+    <!--Hamburger menu will slide in-->
+        <div class="header__menuListings">
+            <button class="header__menuButton"><a href="#"></a></button>
+            <button class="header__menuButton"><a href="#"></a></button>
+            <button class="header__menuButton"><a href="#"></a></button>
+            <button class="header__menuButton"><a href="#"></a></button>
+            <button class="header__menuButton"><a href="#"></a></button>
+            <button class="header__closeButton"><a href="#"></a></button>
+        </div>
     </header>
-
+<main>
+    <div class="main__heading">
+        <h2>Featured Posts</h2>
+        <div class="main__heading--rule"></div>
+    </div>
+        <div class="main__postIconReel">
+            <div class="main__postIcon">
+                <img src="#" alt="post icon" />
+            </div>
+            <div class="main__navigationArrows">
+                <button class="leftArrow"><img src="media/leftArrow.png" /></button>
+                <button class="rightArrow"><img src="media/rightArrow.png" /></button>
+            </div>
+            <div class="main__postCard">
+                <h3>Post Title</h3>
+                <p>
+                    post starter text
+                </p>
+                <button class="main__readMore">Read More</button>
+            </div>
+    </div>
+</main>
+<footer>
+    <div class="footer__fullBox">
+        <div class="footer__contentBox">
+            <h2>&#169; Paul DiGerolamo, 2022</h2>
+            <div class="footer__contacts">
+                <img src="#" alt="mail" /><a href="mailto:Prd46@drexel.edu"></a>
+                <img src="#" alt="phone" /><a href="tel:6098326844"></a>
+                <img src="#" alt="linkedin" /><a href="https://www.linkedin.com/in/prd46/" target="_blank"></a>"
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
