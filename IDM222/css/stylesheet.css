@@ -1,0 +1,180 @@
+:root{
+    --glow: blue;
+    --glass: rgba(68, 125, 158, 0.527);
+    --invis: rgba(0, 0, 0, 0);
+}
+
+
+body{
+    background-color: black;
+    background-image: url('../media/bgimg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto;
+}
+header{
+    display: grid;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+.header__fullbox{
+    display: grid;
+    align-items: center;
+    width: 100%
+}
+.header__contentbox{
+    display: grid;
+    align-items: center;
+}
+main{
+    grid-row-start: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+footer{
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+   /*fonts*/
+   @font-face {
+    font-family: 'staatliches';
+    src: url('../fonts/staatliches-regular-webfont.woff2') format('woff2'),
+         url('../fonts/staatliches-regular-webfont.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'oswald';
+    src: url('../fonts/oswald-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/oswald-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+   /*text attributes*/
+
+
+   h1, h2, ul, ol {
+    font-family: 'Courier New', Courier, monospace; 
+                }
+h1, h2, h3{
+    color:white;
+    font-family: 'staatliches', Arial, Helvetica, sans-serif; 
+    margin: 1rem;
+    text-align: center;
+    font-size: 1.5;
+                }              
+p {
+    color: white;
+    line-height: 2rem;
+    font-family: 'oswald', Arial, Helvetica, sans-serif; 
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: lighter;
+    margin: 1rem 1rem;
+    text-align: center;
+    text-shadow: .25rem .25rem .15rem black;
+}
+.paragraph {
+    max-width: 60rem; 
+}
+
+    /*buttons*/
+:link{color: lightskyblue; font-family: 'oswald', Arial, Helvetica, sans-serif;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: normal;
+    display: inline;
+    text-decoration: none;
+    text-shadow: .15rem .15rem .1rem black;
+    }
+
+button{
+    background-color: var(--invis);
+    border-style: none;
+    color: white;
+    font-family: 'staatliches', Arial, Helvetica, sans-serif; 
+    font-size: 1.5rem;
+    width: auto;
+}
+.header__hamburger{
+    height: 3rem;
+    width: auto;
+}
+.header__menuListings{
+    display: none;
+}
+.open{
+    display: block;
+}
+.hidden{
+    display: none;
+}
+.header__name{
+    border: solid 2px #ffffff;
+    border-radius: 1rem;
+    height: 3rem;
+    grid-column-start: 1;
+    justify-self: center;
+    margin: 2rem 0 .5rem 0;
+    padding: 2rem 1rem;
+    width: 13rem;
+}
+.header__menuButton{
+    border: solid 2px white;
+    border-radius: 1rem;
+    display: block;
+    height: 3rem;
+    margin: .5rem auto;
+    width: 15rem;
+}
+
+
+main{
+    grid-template-areas: 
+    '.leftArrow, .rightArrow'
+    ;
+}
+.arrow{
+    height: 3rem;
+    width: auto;
+}
+.main__postReel{
+    display: flex;
+    border-radius: 1rem;
+}
+.main__icon{
+    display: flex;
+    border: solid 2px white;
+    border-radius: 1rem;
+    width: 15rem;
+}
+
+.main__postArea{
+    display: flex;
+    justify-content: center;
+}
+.main__postCard{
+    border: solid 2px white;
+    border-radius: 1rem;
+    display: block;
+    height: 16rem;
+    margin: 2rem;
+    padding: 1rem;
+}
+.footer__contacts{
+    display: flex;
+    justify-content: space-around;
+    margin: 0 20% 3rem 20%;
+}
+.footer__icon{
+    width: 5rem;
+    padding: .5rem;
+}

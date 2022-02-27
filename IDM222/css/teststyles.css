@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+}
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+.obj1{
+    order: 2;
+}
+.obj2{
+    order: 3;
+    
+}
+.obj3{
+    order: 1;
+    
+}
