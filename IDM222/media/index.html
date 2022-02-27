@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="normalize">
+    <link rel="stylesheet" href="css/stylesheet.css">
+</head>
+<body>
+    <!--Header contains my name, which can be clicked to return home, and a menu-->
+    <header>
+        <div class="header__fullbox">
+            <div class="header__contentbox">
+                <h1 class="header__name">PAUL DIGEROLAMO</h1>
+                <div class="header__menuListings">
+                        <!--Hamburger menu will slide in-->
+                    <a href="index.html"><button class="header__menuButton">Home</button></a>
+                    <a href="blog.html"><button class="header__menuButton">Blog</button></a>
+                    <a href="portfolio.html"><button class="header__menuButton">Designs</button></a>
+                    <a href="resume.html"><button class="header__menuButton">Resume</button></a>
+                    <a href="extras.html"><button class="header__menuButton">Extras</button></a>
+                </div>
+                <button class="header__hamburger"><img class="header__hamburger" src="media/menuButton.png" alt="site menu" /></button>
+            </div>
+        </div>
+    </header>
+<main id="main">
+    <div class="main__heading">
+        <h2>Featured Posts</h2>
+        <div class="main__heading--rule"></div>
+    </div>
+        <div class="main__postArea">
+            <div class="main__postReel">
+                <button class="leftArrow"><img class="arrow" src="media/leftArrow.png" /></button>
+                <a href="plasticplanet.html" class="open"><img class="main__icon post1" src="media/plasticplanet.png" alt="post icon" /></a>
+                <a href="yci.html" class="hidden"><img class="main__icon post2" src="media/sleepy.jpg" alt="post icon" /></a>
+                <a href="sp.html" class="hidden"><img class="main__icon post3" src="media/pupypyi copy.png" alt="post icon" /></a>
+                <a href="na.html" class="hidden"><img class="main__icon post4" src="media/lampifeat.png" alt="post icon" /></a>
+                <a href="trt.html" class="hidden"><img class="main__icon post5" src="media/aau copy.png" alt="post icon" /></a>
+                <a href="wr.html" class="hidden"><img class="main__icon post6 " src="media/wrf.jpg" alt="post icon" /></a>
+                <button class="rightArrow"><img class="arrow" src="media/rightArrow.png" /></button>
+            </div>
+        </div>
+            <div class="main__postCard">
+                <h1>Plastic Planet</h1>
+                <p>
+                    In addition to creating one of my favorite art pieces ever, this song of mine...
+                </p>
+                <button class="main__readMore">Read More</button>
+            </div>
+</main>
+<footer>
+    <div class="footer__fullBox">
+        <div class="footer__contentBox">
+            <h2>&#169; Paul DiGerolamo, 2022</h2>
+            <div class="footer__contacts">
+                <a href="mailto:Prd46@drexel.edu"><img src="media/mailIcon.png" alt="mail" class="footer__icon" /></a>
+                <a href="tel:6098326844"><img src="media/phoneIcon.png" alt="phone" class="footer__icon" /></a>
+                <a href="https://www.linkedin.com/in/prd46/" target="_blank"><img src="media/linedinIcon.png" alt="linkedin" class="footer__icon" /></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="scripts/app.js"></script>
+</body>
+</html>
