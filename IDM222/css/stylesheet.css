@@ -133,13 +133,14 @@ button{
     margin: .5rem auto;
     width: 15rem;
 }
-
-
-main{
-    grid-template-areas: 
-    '.leftArrow, .rightArrow'
-    ;
+/*
+.main__postBox{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    margin: 1rem 5rem;
+    justify-items: center;
 }
+*/
 .arrow{
     height: 2rem;
     width: auto;
@@ -147,6 +148,7 @@ main{
 .main__postReel{
     display: flex;
     border-radius: 1rem;
+    align-items: center;
 }
 .main__icon{
     display: flex;
@@ -177,6 +179,13 @@ main{
     display: flex;
     justify-content: center;
 }
+.main__postReel{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    justify-items: center;
+    margin: 0 1rem;
+    max-width: 60%;
+}
 .main__postCard{
     border: solid 2px white;
     border-radius: 1rem;
@@ -185,6 +194,19 @@ main{
     margin: 2rem;
     padding: .5rem;
 }
+.smallIcon{
+    width: 5rem;
+    z-index: 1;
+}
+.medIcon{
+    width: 10rem;
+    z-index: 2;
+}
+.largeIcon{
+    width: 15rem;
+    z-index: 3;
+}
+
 .footer__contacts{
     display: flex;
     justify-content: space-around;
