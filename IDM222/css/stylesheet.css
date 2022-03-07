@@ -12,6 +12,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    position: static;
 }
 header{
     display: grid;
@@ -103,35 +104,50 @@ button{
     width: auto;
 }
 .header__hamburger{
+    display: flex;
     height: 3rem;
-    width: auto;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 15rem;
 }
+
 .header__menuListings{
     display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+.header__nestedName{
+    border: solid 2px #ffffff;
+    border-radius: 1rem;
+    display: none;
+    height: 3rem;
+    margin: 2rem 0 .5rem 0;
+    padding: 2rem 1rem;
+    width: 15rem;
 }
 .open{
-    display: block;
-}
-.hidden{
-    display: none;
+    display: flex;
 }
 .header__name{
     border: solid 2px #ffffff;
     border-radius: 1rem;
     height: 3rem;
-    grid-column-start: 1;
-    justify-self: center;
     margin: 2rem 0 .5rem 0;
     padding: 2rem 1rem;
-    width: 13rem;
+    width: 15rem;
 }
 .header__menuButton{
     border: solid 2px white;
     border-radius: 1rem;
     display: block;
     height: 3rem;
-    margin: .5rem auto;
+    margin: .25rem auto;
     width: 15rem;
+}
+.header__nameBox{
+    display: flex;
+    justify-content: center;
 }
 /*
 .main__postBox{
@@ -142,8 +158,15 @@ button{
 }
 */
 .arrow{
-    height: 2rem;
-    width: auto;
+    height: auto;
+    max-width: 100%;
+    transition: opacity .3s ease-in-out;
+}
+.leftArrow{
+    width: 100%
+}
+.rightArrow{
+    width: 100%
 }
 .main__postReel{
     display: flex;
@@ -190,9 +213,10 @@ button{
     border: solid 2px white;
     border-radius: 1rem;
     display: block;
-    height: 18rem;
-    margin: 2rem;
-    padding: .5rem;
+    height: auto;
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 450px;
 }
 .smallIcon{
     width: 5rem;
@@ -210,9 +234,111 @@ button{
 .footer__contacts{
     display: flex;
     justify-content: space-around;
-    margin: 0 20% 3rem 20%;
+    margin: 0 auto 3rem auto;
+    max-width: min-content;
 }
 .footer__icon{
     width: 5rem;
     padding: .5rem;
+}
+
+
+/*animations*/
+h1.bigname{
+    color: black;
+}
+@keyframes opener {
+    0%{
+        display: block;
+        color:black;
+        font-size: 5vh;
+        opacity: 100%;
+        -webkit-text-stroke: 2px black;   
+    }
+    5%{
+        color:white;
+        -webkit-text-stroke: 1px white;   
+}
+    30%{
+    color:white;
+    -webkit-text-stroke: .5px rgb(151, 217, 255);   
+}
+    80%{
+    color:black;
+    -webkit-text-stroke: .2px rgba(4, 70, 109, 0.226);  
+    opacity: 100%; 
+}
+    99%{
+    color:black;
+    display: none;
+    font-size: 5vh;
+    height: 100%;
+    opacity: 0;
+    -webkit-text-stroke: 4px black;   
+    width: 100%;
+}
+100%{
+    font-size: 0vh;
+    height: 0;
+    width: 0  
+}
+}
+.page__load{
+    align-items: center;
+    animation: /*opener*/ 2s linear .5s 1 forwards;
+    background: black;
+    color: black;
+    display: /*flex*/ none;
+    font-size: 5vw;
+    height: 100%;
+    justify-content: center;
+    letter-spacing: .3rem;
+    position: absolute;
+    width: 100%;
+    -webkit-text-stroke: .5px black;
+    z-index: 1000;
+}
+@media screen and (min-width: 950px){
+    .header__hamburger{
+        display: none;
+    }
+    .header__menuListings{
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        margin: 2rem 0 .5rem 0;
+    }
+    .header__menuButton{
+        display: block;
+        height: 3rem;
+        margin: .25rem auto;
+        width: 10rem;
+        min-width: 7rem;
+    }
+    .midButton{
+        height: 4.5rem;
+    }
+    .header__name{
+        display: none;
+    }
+    .header__nestedName{
+        display: block;
+        height: 3rem;
+        margin: 0;
+        padding: 2rem 1rem;
+        width: 15rem;
+    }
+    .innerNest{
+        border: none;
+        font-size: 2rem;
+        height: 3rem;
+        margin: 0 auto;
+        min-width: 15rem;
+        width: 10rem;
+        text-align: center;
+        
+    }
+    .arrow{
+        opacity: .2;
+    }
 }
