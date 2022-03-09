@@ -6,6 +6,7 @@
 
 
 body{
+    background-attachment: fixed;
     background-color: black;
     background-image: url('../media/bgimg.png');
     background-position: center;
@@ -39,6 +40,12 @@ footer{
     grid-column-start: 1;
     grid-column-end: 5;
 }
+.hr{
+    background-color: var(--glass);
+    height: 2px;
+    margin: 0 auto;
+    width: 50%;
+}
    /*fonts*/
    @font-face {
     font-family: 'staatliches';
@@ -58,15 +65,15 @@ footer{
    /*text attributes*/
 
 
-   h1, h2, ul, ol {
+h1, h2, ul, ol {
     font-family: 'Courier New', Courier, monospace; 
                 }
 h1, h2, h3{
     color:white;
     font-family: 'staatliches', Arial, Helvetica, sans-serif; 
+    font-size: 1.5;
     margin: 1rem;
     text-align: center;
-    font-size: 1.5;
     text-shadow: .25rem .25rem .15rem black;
                 }              
 p {
@@ -128,6 +135,9 @@ button{
 }
 .open{
     display: flex;
+}
+.off{
+    display: none;
 }
 .header__name{
     border: solid 2px #ffffff;
@@ -219,10 +229,14 @@ button{
     max-width: 450px;
 }
 .smallIcon{
+    opacity: .6;
+    transition: opacity .3s ease-in-out;
     width: 5rem;
     z-index: 1;
 }
 .medIcon{
+    opacity: .8;
+    transition: opacity .3s ease-in-out;
     width: 10rem;
     z-index: 2;
 }
@@ -230,7 +244,9 @@ button{
     width: 15rem;
     z-index: 3;
 }
-
+.icon{
+    position: relative;
+}
 .footer__contacts{
     display: flex;
     justify-content: space-around;
@@ -247,12 +263,16 @@ button{
 h1.bigname{
     color: black;
 }
+.page__load{
+    display: none;
+}
 @keyframes opener {
     0%{
         display: block;
         color:black;
         font-size: 5vh;
         opacity: 100%;
+        overflow: hidden;
         -webkit-text-stroke: 2px black;   
     }
     5%{
@@ -278,26 +298,31 @@ h1.bigname{
     width: 100%;
 }
 100%{
+    display: none;
     font-size: 0vh;
     height: 0;
     width: 0  
 }
 }
-.page__load{
+.animationActivate{
     align-items: center;
-    animation: /*opener*/ 2s linear .5s 1 forwards;
+    animation: opener 2s linear .5s 1 forwards;
     background: black;
+    background-attachment: fixed;
     color: black;
-    display: /*flex*/ none;
+    display: flex;
     font-size: 5vw;
-    height: 100%;
+    height: 100%; 
     justify-content: center;
     letter-spacing: .3rem;
-    position: absolute;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
     width: 100%;
     -webkit-text-stroke: .5px black;
     z-index: 1000;
 }
+/*header adjustment*/
 @media screen and (min-width: 950px){
     .header__hamburger{
         display: none;
@@ -340,5 +365,11 @@ h1.bigname{
     }
     .arrow{
         opacity: .2;
+    }
+    .smallIcon{
+        opacity: 1;
+    }
+    .medIcon{
+        opacity: 1;
     }
 }

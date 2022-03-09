@@ -9,24 +9,25 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
- <!--Header contains my name, which can be clicked to return home, and a menu-->
- <header>
-    <div class="header__fullbox">
-        <div class="header__contentbox">
-            <h1 class="header__name">PAUL DIGEROLAMO</h1>
-            <div class="header__menuListings">
-                    <!--Hamburger menu will slide in-->
-                <a href="index.html"><button class="header__menuButton">Home</button></a>
-                <a href="blog.html"><button class="header__menuButton">Blog</button></a>
-                <a href="portfolio.html"><button class="header__menuButton">Designs</button></a>
-                <a href="resume.html"><button class="header__menuButton">Resume</button></a>
-                <a href="extras.html"><button class="header__menuButton">Extras</button></a>
+    <!--Header contains my name, which can be clicked to return home, and a menu-->
+    <header>
+        <div class="header__fullbox">
+            <div class="header__contentbox">
+                <div class="header__nameBox">
+                <h1 class="header__name">PAUL DIGEROLAMO</h1>
+                </div>
+                <div class="header__menuListings">
+                        <!--Hamburger menu will slide in-->
+                    <a href="index.html"><button class="header__menuButton">Home</button></a>
+                    <a href="blog.html"><button class="header__menuButton midButton">Blog</button></a>
+                    <div class="header__nestedName"><h1 class="header__menuButton innerNest">PAUL DIGEROLAMO</h1></div>
+                    <a href="portfolio.html"><button class="header__menuButton midButton">Designs</button></a>
+                    <a href="resume.html"><button class="header__menuButton">Resume</button></a>
+                </div>
+                <button class="header__hamburger"><img class="header__hamburger" src="media/menuButton.png" alt="site menu" /></button>
             </div>
-            <button class="header__hamburger"><img class="header__hamburger" src="media/menuButton.png" alt="site menu" /></button>
-        </div>
-    </div>
-</header>
-<!-- EXPERIMENTAL POST ARCHIVE BLOG
+            </div>
+    </header>
 <main>
     <h2>Posts from:</h2>
     <h3>Date to Date</h3>
@@ -46,7 +47,6 @@
     <button class="rightArrow"><img class="arrow" src="media/rightArrow.png" /></button>
 </div>
 </main>
--->
 <footer>
     <div class="footer__fullBox">
         <div class="footer__contentBox">
