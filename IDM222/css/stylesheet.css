@@ -185,9 +185,13 @@ button{
 }
 .main__icon{
     display: flex;
-    border: solid 2px white;
+    height: 15rem;
     border-radius: 1rem;
     width: 15rem;
+}
+.icon{
+    border: solid 2px white;
+    border-radius: 1.2rem;
 }
 .blog__icon{
     display: flex;
@@ -229,14 +233,14 @@ button{
     max-width: 450px;
 }
 .smallIcon{
+    height: 5rem;
     opacity: .6;
-    transition: opacity .3s ease-in-out;
     width: 5rem;
     z-index: 1;
 }
 .medIcon{
+    height: 10rem;
     opacity: .8;
-    transition: opacity .3s ease-in-out;
     width: 10rem;
     z-index: 2;
 }
@@ -322,6 +326,77 @@ h1.bigname{
     -webkit-text-stroke: .5px black;
     z-index: 1000;
 }
+
+@keyframes fadeInAnim{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeInMedAnim{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: .8;
+    }
+}
+@keyframes fadeInSmallAnim{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: .6;
+    }
+}
+@keyframes fadeOutAnim{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes fadeOutMedAnim{
+    from{
+        opacity: .8;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes fadeOutSmallAnim{
+    from{
+        opacity: .6;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.fadeIn{
+    animation: fadeInAnim .25s ease-in forwards;
+}
+.fadeInMed{
+    animation: fadeInMedAnim .25s ease-in forwards;
+}
+.fadeInSmall{
+    animation: fadeInSmallAnim .25s ease-in forwards;
+}
+.fadeOut{
+    animation: fadeOutAnim .25s ease-out forwards;
+}
+.fadeOutMed{
+    animation: fadeOutMedAnim .25s ease-out forwards;
+}
+.fadeOutSmall{
+    animation: fadeOutSmallAnim .25s ease-out forwards;
+}
+
+
+
+
 /*header adjustment*/
 @media screen and (min-width: 950px){
     .header__hamburger{
