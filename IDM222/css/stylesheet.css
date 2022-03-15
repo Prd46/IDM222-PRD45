@@ -92,15 +92,20 @@ p {
 }
 
     /*buttons*/
-:link{color: lightskyblue; font-family: 'oswald', Arial, Helvetica, sans-serif;
-    line-height: 2rem;
+:link{
+    color: lightskyblue; font-family: 'oswald', Arial, Helvetica, sans-serif;
+    display: inline;
     font-size: 1.5rem;
     font-weight: bold;
     font-style: normal;
-    display: inline;
+    line-height: 2rem;
     text-decoration: none;
     text-shadow: .15rem .15rem .1rem black;
     }
+:visited{
+    color: gray
+
+}
 
 button{
     background-color: var(--invis);
@@ -171,12 +176,15 @@ button{
     height: auto;
     max-width: 100%;
     transition: opacity .3s ease-in-out;
+    z-index: 7;
 }
 .leftArrow{
-    width: 100%
+    width: 100%;
+    z-index: 7;
 }
 .rightArrow{
-    width: 100%
+    width: 100%;
+    z-index: 7;
 }
 .main__postReel{
     display: flex;
@@ -192,20 +200,27 @@ button{
 .icon{
     border: solid 2px white;
     border-radius: 1.2rem;
+    object-fit: cover;
 }
 .blog__icon{
+    border: solid 2px white;
+    border-radius: 1rem;
     display: flex;
-    border: solid .5px white;
-    width: 5rem;
+    height: 14rem;
+    margin: .5rem;
+    max-width: 14rem;
+    object-fit: cover;
 }
-.blog__area{
+.blog__postArea{
     border: solid 3px white;
     border-radius: 2rem;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 1rem auto;
-    width: 15rem;
+    overflow: hidden;
+    padding: 2rem;
+    width: 80%;
 }
 .blog__reel{
     display: flex;
@@ -232,6 +247,13 @@ button{
     padding: 1rem;
     max-width: 450px;
 }
+.main__reelBlocker{
+    display: none;
+    height: 250px;
+    position: absolute;
+    width: 90%;
+    z-index: 3;
+}
 .smallIcon{
     height: 5rem;
     opacity: .6;
@@ -246,9 +268,10 @@ button{
 }
 .largeIcon{
     width: 15rem;
-    z-index: 3;
+    z-index: 4;
 }
 .icon{
+    overflow: hidden;
     position: relative;
 }
 .footer__contacts{
@@ -376,24 +399,14 @@ h1.bigname{
     }
 }
 .fadeIn{
-    animation: fadeInAnim .25s ease-in forwards;
+    animation: fadeInAnim .2s ease-in forwards;
 }
 .fadeInMed{
-    animation: fadeInMedAnim .25s ease-in forwards;
+    animation: fadeInMedAnim .2s ease-in forwards;
 }
 .fadeInSmall{
-    animation: fadeInSmallAnim .25s ease-in forwards;
+    animation: fadeInSmallAnim .2s ease-in forwards;
 }
-.fadeOut{
-    animation: fadeOutAnim .25s ease-out forwards;
-}
-.fadeOutMed{
-    animation: fadeOutMedAnim .25s ease-out forwards;
-}
-.fadeOutSmall{
-    animation: fadeOutSmallAnim .25s ease-out forwards;
-}
-
 
 
 
@@ -446,5 +459,11 @@ h1.bigname{
     }
     .medIcon{
         opacity: 1;
+    }
+}
+@media screen and (max-width: 500px){
+    .main__reelBlocker{
+        display: block;
+        margin: 0 auto;
     }
 }

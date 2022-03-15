@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <!--Header contains my name, which can be clicked to return home, and a menu-->
+    <div class="page__load">
+        <h1 class="bigname">Paul DiGerolamo</h1>
+    </div>
+    <!--Header contains hamburger menu-->
     <header>
         <div class="header__fullbox">
             <div class="header__contentbox">
@@ -17,7 +20,7 @@
                 <h1 class="header__name">PAUL DIGEROLAMO</h1>
                 </div>
                 <div class="header__menuListings">
-                        <!--Hamburger menu will slide in-->
+                        <!--Hamburger menu will open up top, turns into horizontal header on smaller screens-->
                     <a href="index.html"><button class="header__menuButton">Home</button></a>
                     <a href="blog.html"><button class="header__menuButton midButton">Blog</button></a>
                     <div class="header__nestedName"><h1 class="header__menuButton innerNest">PAUL DIGEROLAMO</h1></div>
@@ -28,25 +31,35 @@
             </div>
             </div>
     </header>
-<main>
-    <h2>Posts from:</h2>
-    <h3>Date to Date</h3>
-    <div class="blog__reel">
-    <button class="leftArrow"><img class="arrow" src="media/leftArrow.png" /></button>
-    <div class="blog__area">
-        <a href="plasticplanet.html"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
-        <a href="plasticplanet.html"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
-        <a href="plasticplanet.html"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
-        <a href="plasticplanet.html"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
-        <a href="plasticplanet.html"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
-        <a href="plasticplanet.html"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
-        <a href="plasticplanet.html"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
-        <a href="plasticplanet.html"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
-
-    </div>
-    <button class="rightArrow"><img class="arrow" src="media/rightArrow.png" /></button>
+    <main class="main" id="main">
+    <div class="main__heading">
+        <h2>Post Archive</h2>
 </div>
-</main>
+</main> 
+    <form>
+        <label for="blogSort">Sort by category:</label>
+        <select class="dropDown" id="blogSort" name="blogSort" value="all">
+            <option value="all">All</option>
+            <option value="designs">Designs / code</option>
+            <option value="artwork">Artwork</option>
+            <option value="music">Music / Audio</option>
+            <option value="animation">Animation</option>
+            <option value="photography">Photography</option>
+            <option value="editing">Video editing</option>
+            <option value="schoolWork">School work</option>
+        </select>
+        <button class="postFilter">Filter</button>
+    </form>
+    <!--USE BUTTONS INSTEAD-->
+    <div class="blog__postArea">
+        <a href="plasticplanet.html" class="all music artwork animation editing"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
+        <a href="yci.html" class="all animation"><img class="blog__icon" src="media/sleepy.jpg" alt="post icon" /></a>
+        <a href="sp.html" class="all schoolWork designs"><img class="blog__icon" src="media/pupypyi copy.png" alt="post icon" /></a>
+        <a href="na.html" class="all artwork"><img class="blog__icon" src="media/lampifeat.png" alt="post icon" /></a>
+        <a href="trt.html" class="all music schoolWork"><img class="blog__icon" src="media/aau copy.png" alt="post icon" /></a>
+        <a href="wr.html" class="all photography"><img class="blog__icon" src="media/wrf.jpg" alt="post icon" /></a>
+    </div>
+<!--Footer with Email, phone, and linkedin. Contact box stays the same size-->
 <footer>
     <div class="footer__fullBox">
         <div class="footer__contentBox">

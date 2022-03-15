@@ -1,5 +1,9 @@
 
 const menuButton = document.querySelector('.header__hamburger');
+const filterButton = document.querySelector('.postFilter');
+const categoryField = document.querySelector('.dropDown');
+
+
 menuButton.addEventListener('click', function(){
 const menu = document.querySelector('.header__menuListings'); 
 menu.classList.toggle('open'); 
@@ -27,13 +31,14 @@ if (hasRun == 'false'){
 //Use JS to ACTIVATE IT
 //DEACTIVATE it after some time
 
+//Homepage carousel
 const rightArrow = document.querySelector('.rightArrow');
 const leftArrow = document.querySelector('.leftArrow');
 const posts = document.querySelector('.main__postReel');
 const card = document.querySelector('.main__postCard');
-let reelPosition = 2; 
+let reelPosition = 3; 
 console.log(reelPosition);
-leftArrow.addEventListener('click', function(){
+leftArrow.addEventListener('click', function(event){
     if (reelPosition <= 1){
         reelPosition = 7;
     }
@@ -60,7 +65,7 @@ leftArrow.addEventListener('click', function(){
     }
     
 })
-rightArrow.addEventListener('click', function(){
+rightArrow.addEventListener('click', function(event){
     if (reelPosition >= 6){
         reelPosition = 0;
     }
@@ -86,3 +91,5 @@ rightArrow.addEventListener('click', function(){
     card.innerHTML = '<h1>Plastic Planet</h1><p>In addition to creating one of my favorite art pieces ever, this song of mine... </p><button class="main__readMore"><a href="plasticplanet.html">Read More</a></button>'
     }
 })
+//Blog filter
+
