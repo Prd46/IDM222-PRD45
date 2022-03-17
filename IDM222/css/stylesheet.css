@@ -274,6 +274,10 @@ button{
     overflow: hidden;
     position: relative;
 }
+.footer__fullBox{
+    bottom: 0;
+    position: fixed;
+}
 .footer__contacts{
     display: flex;
     justify-content: space-around;
