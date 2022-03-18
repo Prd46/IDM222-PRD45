@@ -171,6 +171,7 @@ button:active{
 button:hover{
     transform: scale(1.05);
 }
+/*Header*/
 .header__hamburger{
     display: flex;
     height: 3rem;
@@ -228,6 +229,7 @@ button:hover{
     display: flex;
     justify-content: center;
 }
+/*Arrows*/
 .arrow{
     height: auto;
     max-width: 100%;
@@ -248,6 +250,7 @@ button:hover{
     width: 100%;
     z-index: 7;
 }
+/*Functional elements, home carousel and blog*/
 .main__postReel{
     display: flex;
     border-radius: 1rem;
@@ -296,6 +299,7 @@ button:hover{
     margin: .25rem;
     width: 8rem;
 }
+
 .main__postArea{
     display: flex;
     justify-content: center;
@@ -367,6 +371,7 @@ button:hover{
 .portfolio__button:active{
     background-color: var(--glass);
 }
+/*Footer stuff*/
 .footer__contacts{
     display: flex;
     justify-content: space-around;
@@ -472,7 +477,7 @@ h1.bigname{
 
 
 
-/*header adjustment*/
+/*Responsive adjustments*/
 @media screen and (min-width: 1000px){
     .header__hamburger{
         display: none;
