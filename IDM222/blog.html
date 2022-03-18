@@ -36,28 +36,25 @@
         <h2>Post Archive</h2>
 </div>
 </main> 
-    <form>
-        <label for="blogSort">Sort by category:</label>
-        <select class="dropDown" id="blogSort" name="blogSort" value="all">
-            <option value="all">All</option>
-            <option value="designs">Designs / code</option>
-            <option value="artwork">Artwork</option>
-            <option value="music">Music / Audio</option>
-            <option value="animation">Animation</option>
-            <option value="photography">Photography</option>
-            <option value="editing">Video editing</option>
-            <option value="schoolWork">School work</option>
-        </select>
-        <button class="postFilter">Filter</button>
-    </form>
-    <!--USE BUTTONS INSTEAD-->
-    <div class="blog__postArea">
-        <a href="plasticplanet.html" class="all music artwork animation editing"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
-        <a href="yci.html" class="all animation"><img class="blog__icon" src="media/sleepy.jpg" alt="post icon" /></a>
-        <a href="sp.html" class="all schoolWork designs"><img class="blog__icon" src="media/pupypyi copy.png" alt="post icon" /></a>
-        <a href="na.html" class="all artwork"><img class="blog__icon" src="media/lampifeat.png" alt="post icon" /></a>
-        <a href="trt.html" class="all music schoolWork"><img class="blog__icon" src="media/aau copy.png" alt="post icon" /></a>
-        <a href="wr.html" class="all photography"><img class="blog__icon" src="media/wrf.jpg" alt="post icon" /></a>
+<!--Filter buttons-->
+    <div class="blog__buttons">
+        <button class="blogButton js-all">All</button>
+        <button class="blogButton js-art">Art</button>
+        <button class="blogButton js-animation">Animation</button>
+        <button class="blogButton js-design">Designs</button>
+        <button class="blogButton js-editing">Editing</button>
+        <button class="blogButton js-music">Music</button>
+        <button class="blogButton js-photos">Photos</button>
+        <button class="blogButton js-schoolwork">Schoolwork</button>
+    </div>
+<!--Contains all posts and will be filtered with javascript-->
+    <div class="blog__postArea js-postArea">
+        <a href="plasticplanet.html" class="all music art animation editing fadeIn"><img class="blog__icon" src="media/plasticplanet.png" alt="post icon" /></a>
+        <a href="yci.html" class="all art animation music fadeIn"><img class="blog__icon" src="media/sleepy.jpg" alt="post icon" /></a>
+        <a href="sp.html" class="all schoolWork designs fadeIn"><img class="blog__icon" src="media/pupypyi copy.png" alt="post icon" /></a>
+        <a href="na.html" class="all art fadeIn"><img class="blog__icon" src="media/lampifeat.png" alt="post icon" /></a>
+        <a href="trt.html" class="all editing music schoolWork fadeIn"><img class="blog__icon" src="media/aau copy.png" alt="post icon" /></a>
+        <a href="wr.html" class="all photography fadeIn"><img class="blog__icon" src="media/wrf.jpg" alt="post icon" /></a>
     </div>
 <!--Footer with Email, phone, and linkedin. Contact box stays the same size-->
 <footer>
@@ -72,6 +69,6 @@
         </div>
     </div>
 </footer>
-<script src="scripts/app.js"></script>
+<script src="scripts/blogApp.js"></script>
 </body>
 </html>

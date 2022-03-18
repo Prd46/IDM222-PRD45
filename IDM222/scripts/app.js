@@ -9,28 +9,6 @@ const menu = document.querySelector('.header__menuListings');
 menu.classList.toggle('open'); 
 })
 
-/*
-localStorage.setItem('hasRun', 'false');
-const hasRun = localStorage.getItem('hasRun') || null;
-const lastRun = localStorage.getItem('lastRun');
-const intro = document.querySelector('.page__load');
-console.log(hasRun, lastRun);
-if (hasRun == 'false'){
-    intro.classList.add('animationActivate');
-    localStorage.removeItem('hasRun', 'false');
-    localStorage.setItem('lastRun', JSON.stringify(new Date()));
-    console.log(hasRun, lastRun);
-    setTimeout(function(){
-    intro.classList.remove('animationActivate');
-    localStorage.setItem('hasRun', 'false');
-    }, 3000);
-}
-*/
-
-//Default state is INACTIVE
-//Use JS to ACTIVATE IT
-//DEACTIVATE it after some time
-
 //Homepage carousel
 const rightArrow = document.querySelector('.rightArrow');
 const leftArrow = document.querySelector('.leftArrow');
@@ -38,7 +16,8 @@ const posts = document.querySelector('.main__postReel');
 const card = document.querySelector('.main__postCard');
 let reelPosition = 3; 
 console.log(reelPosition);
-leftArrow.addEventListener('click', function(event){
+//reel position changes as arrows are clicked, inner HTML changes based on number
+leftArrow.addEventListener('click', function(){
     if (reelPosition <= 1){
         reelPosition = 7;
     }
@@ -91,5 +70,3 @@ rightArrow.addEventListener('click', function(event){
     card.innerHTML = '<h1>Plastic Planet</h1><p>In addition to creating one of my favorite art pieces ever, this song of mine... </p><button class="main__readMore"><a href="plasticplanet.html">Read More</a></button>'
     }
 })
-//Blog filter
-

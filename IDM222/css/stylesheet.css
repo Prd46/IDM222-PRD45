@@ -87,7 +87,7 @@ footer{
 
 
 h1, h2, ul, ol {
-    font-family: 'Courier New', Courier, monospace; 
+    font-family: 'oswald', Arial, Helvetica, sans-serif;  
                 }
 h1, h2, h3{
     color:white;
@@ -118,7 +118,26 @@ p.paragraph {
     margin: 2rem 20%;
     text-align: left;
 }
-
+/*Resume formatting*/
+.resume__resume{
+    border: solid 2px white;
+    border-radius: 2rem;
+    margin: 1rem 10%;
+    padding: 2rem;
+}
+.resume__section{
+    margin: 3rem 0;
+}
+.resume__sectionHeader{
+    text-align: left;
+    line-height: 2rem;
+}
+h3.resume__sectionHeader{
+    font-size: 2rem;
+}
+.resume__bullet{
+    font-size: 1.2rem;
+}
     /*buttons*/
 :link{
     color: lightskyblue; font-family: 'oswald', Arial, Helvetica, sans-serif;
@@ -177,6 +196,9 @@ button:hover{
 }
 .off{
     display: none;
+}
+.lit{
+    background-color: var(--glass);
 }
 .header__name{
     border: solid 2px #ffffff;
@@ -254,11 +276,18 @@ button:hover{
     padding: 2rem;
     width: 80%;
 }
-.blog__reel{
+.blog__buttons{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
-
+.blogButton{
+    border: solid 2px white;
+    border-radius: 1rem;
+    height: 4rem;
+    margin: .25rem;
+    width: 8rem;
+}
 .main__postArea{
     display: flex;
     justify-content: center;
@@ -423,30 +452,6 @@ h1.bigname{
         opacity: .6;
     }
 }
-@keyframes fadeOutAnim{
-    from{
-        opacity: 1;
-    }
-    to{
-        opacity: 0;
-    }
-}
-@keyframes fadeOutMedAnim{
-    from{
-        opacity: .8;
-    }
-    to{
-        opacity: 0;
-    }
-}
-@keyframes fadeOutSmallAnim{
-    from{
-        opacity: .6;
-    }
-    to{
-        opacity: 0;
-    }
-}
 .fadeIn{
     animation: fadeInAnim .2s ease-in forwards;
 }
@@ -533,6 +538,9 @@ h1.bigname{
     .horizontalVideo{
         width: 100%;
     }
+    .resume__resume{
+        margin: 1rem auto;
+    }
 }
 @media screen and (max-width: 350px){
     p.freeform{
@@ -547,6 +555,10 @@ h1.bigname{
     .largeIcon{
         height: 12rem;
         width: 12rem;
+    }
+    .blog__icon{
+        height: 10rem;
+        width: 10rem;
     }
 }
 @media screen and (min-width: 1800px){
