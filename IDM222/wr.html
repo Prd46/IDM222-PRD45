@@ -55,12 +55,36 @@
     <div>
 <p>(Titles from top down: Fractures, Lost, Punctured, Visions Imprisoned, Catharsis, Runaways)</p>
     <div class="main__imageGallery">
-        <img class="main__featuredImage"  src="media/fractures.jpg" alt="Fractures">
-        <img class="main__featuredImage"  src="media/lost.jpg" alt="Lost">
-        <img class="main__featuredImage"  src="media/punctured.jpg" alt="Punctured">
-        <img class="main__featuredImage"  src="media/visions-imprisoned.jpg" alt="Visions Imprisioned">
-        <img class="main__featuredImage"  src="media/catharsis.jpg" alt="Catharsis">
-        <img class="main__featuredImage"  src="media/runaways.jpg" alt="Runaways">
+        <picture>
+            <source media="(min-width: 450px)" srcset="media/fractures.jpg" />
+            <source media="(max-width: 450px)" srcset="media/fracturesSmall.jpg" />
+            <img class="main__featuredImage"  src="media/fractures.jpg" alt="Fractures">
+        </picture>
+        <picture>
+            <source media="(min-width: 450px)" srcset="media/lost.jpg" />
+            <source media="(max-width: 450px)" srcset="media/lostSmall.jpg" />
+            <img class="main__featuredImage"  src="media/lost.jpg" alt="Lost">
+        </picture>
+        <picture>
+            <source media="(min-width: 450px)" srcset="media/punctured.jpg" />
+            <source media="(max-width: 450px)" srcset="media/puncturedSmall.jpg" />
+            <img class="main__featuredImage"  src="media/punctured.jpg" alt="Punctured">
+        </picture>
+        <picture>
+            <source media="(min-width: 450px)" srcset="media/visions-imprisoned.jpg" />
+            <source media="(max-width: 450px)" srcset="media/visions-imprisonedSmall.jpg" />
+            <img class="main__featuredImage"  src="media/visions-imprisoned.jpg" alt="Visions Imprisioned">
+        </picture>
+        <picture>
+            <source media="(min-width: 450px)" srcset="media/catharsis.jpg" />
+            <source media="(max-width: 450px)" srcset="media/catharsisSmall.jpg" />
+            <img class="main__featuredImage"  src="media/catharsis.jpg" alt="Catharsis">
+        </picture>
+        <picture>
+            <source media="(min-width: 450px)" srcset="media/runaways.jpg" />
+            <source media="(max-width: 450px)" srcset="media/runawaysSmall.jpg" />
+            <img class="main__featuredImage"  src="media/runaways.jpg" alt="Runaways">
+        </picture>
         </div>
     </div>
     <!--Footer-->

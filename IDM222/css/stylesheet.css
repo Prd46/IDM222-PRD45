@@ -147,6 +147,7 @@ h3.resume__sectionHeader{
     font-weight: bold;
     font-style: normal;
     line-height: 2rem;
+    text-align: center;
     text-decoration: none;
     text-shadow: .15rem .15rem .1rem black;
     }
@@ -217,7 +218,11 @@ button:hover{
     line-height: 3rem;
     margin: .25rem auto;
     text-align: center;
+    transition: all .1s ease-out;
     width: 15rem;
+}
+.header__menuButton:hover{
+    transform: scale(1.05);
 }
 .header__nameBox{
     display: flex;

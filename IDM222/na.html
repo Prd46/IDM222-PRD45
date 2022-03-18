@@ -29,7 +29,11 @@
         </div>
 </header> 
     <h2>Lava Lamp Ani</h2>
-    <img class="main__featuredImage" src="media/lampi.jpg" alt="Drawing of Ani with Lava Lamp Eyes">
+    <picture>
+        <source media="(min-width: 450px)" srcset="media/lampi.jpg" />
+        <source media="(max-width: 450px)" srcset="media/lampiSmall.jpg" />
+        <img class="main__featuredImage" src="media/lampi.jpg" alt="Drawing of Ani with Lava Lamp Eyes">
+    </picture>
     <p class="freeform paragraph">
         This is one of my favorite art ideas from recent years. It's my titular character Ani 
         with the whites of his eyes and his mouth being replaced with the insides of a lava lamp.
